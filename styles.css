@@ -157,15 +157,15 @@ html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--text);fon
 .quest-item .qxp{margin-left:auto;font-size:11px;color:var(--green);font-weight:600}
 
 /* TODAY CARD */
-.today-card{margin:14px 20px 0;background:linear-gradient(135deg,#1a1500,#221d00);border:1px solid var(--yellow-border);border-radius:var(--radius);padding:20px;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s;position:relative;overflow:hidden}
-.today-card::before{content:'';position:absolute;top:-30px;right:-30px;width:120px;height:120px;background:radial-gradient(circle,rgba(255,209,71,0.15) 0%,transparent 70%)}
+.today-card{margin:14px 20px 0;background:linear-gradient(135deg,#1a1500,#221d00);border:1px solid var(--yellow-border);border-radius:var(--radius);padding:20px;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s;position:relative;overflow:hidden;display:block}
+.today-card::before{content:'';position:absolute;top:-30px;right:-30px;width:120px;height:120px;background:radial-gradient(circle,rgba(255,209,71,0.15) 0%,transparent 70%);z-index:0}
 .today-card:active{transform:scale(0.98)}
-.today-badge{display:inline-flex;align-items:center;gap:4px;background:var(--yellow);color:#000;font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:3px 10px;border-radius:100px;margin-bottom:12px}
-.today-track{font-size:12px;color:var(--muted);margin-bottom:4px}
-.today-title{font-family:'Syne',sans-serif;font-size:17px;font-weight:800;margin-bottom:12px;line-height:1.2}
-.today-meta{display:flex;gap:10px;align-items:center;flex-wrap:nowrap}
+.today-badge{display:inline-flex;align-items:center;gap:4px;background:var(--yellow);color:#000;font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:3px 10px;border-radius:100px;margin-bottom:12px;position:relative;z-index:1}
+.today-track{font-size:12px;color:var(--muted);margin-bottom:4px;position:relative;z-index:1}
+.today-title{font-family:'Syne',sans-serif;font-size:17px;font-weight:800;margin-bottom:12px;line-height:1.2;color:var(--text);position:relative;z-index:1}
+.today-meta{display:flex;gap:10px;align-items:center;flex-wrap:nowrap;position:relative;z-index:1}
 .today-meta span{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:3px}
-.today-btn{margin-left:auto;flex-shrink:0background:var(--yellow);color:#000;font-family:'Syne',sans-serif;font-size:13px;font-weight:800;border:none;border-radius:100px;padding:8px 18px;cursor:pointer}
+.today-btn{margin-left:auto;flex-shrink:0;background:var(--yellow);color:#000;font-family:'Syne',sans-serif;font-size:13px;font-weight:800;border:none;border-radius:100px;padding:8px 18px;cursor:pointer}
 
 /* ═══════════════════════════════════════
    IMPROVEMENT 19: GOAL SETTER
@@ -423,7 +423,7 @@ html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--text);fon
 .wrapped-slide.active{opacity:1;transform:translateX(0)}
 .wrapped-slide.done{opacity:0;transform:translateX(-100%)}
 .w-tag{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
-.w-big{font-family:'Syne',sans-serif;font-size:52px;font-weight:800;line-height:1}
+.w-big{font-family:'Syne',sans-serif;font-size:42px;font-weight:800;line-height:1}
 .w-title{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;line-height:1.15;margin-bottom:10px}
 .w-sub{font-size:15px;color:var(--muted);line-height:1.6;max-width:300px}
 .tap-hint{position:absolute;bottom:36px;font-size:12px;color:rgba(255,255,255,0.2);animation:pulse-hint 2s ease-in-out infinite}
